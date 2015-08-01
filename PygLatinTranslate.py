@@ -1,3 +1,22 @@
+## As a user I can provide a phrase "hello" and
+## see it translated to Pig Latin "ellohay"
+##
+## As a user I can provide a phrase "hello world" and
+## see it translated to Pig Latin "ellohay orldway"
+##
+## As a user I can provide a phrase "Hello world" and
+## see it translated to Pig Latin "Ellohay orldway"
+##
+## As a user I can provide a phrase "Hello, world!!" and
+## see it translated to "Ellohay, orldway!!"
+##
+## As a user I can provide a phrase "eat apples" and
+## see it translated to Pig Latin "eatay applesay"
+##
+## As a user I can provide a phrase "quick brown fox" and
+## see it translated to Pig Latin "ickquay ownbray oxfay"
+
+
 def pigLatinWord(str):
     # changes a given word to its pig latin counterpart
     firstLetter = str[0]
@@ -67,3 +86,11 @@ def assertEqual(expectedValue, givenValue):
         print 'True'
     else:
         print 'False. Expected was: ' + expectedValue + '   Given was: ' + givenValue
+
+def runTests():
+    assertEqual('ellohay', pigLatinSentence('hello'))                           #True
+    assertEqual('ellohay orldway', pigLatinSentence('hello world'))             #True
+    assertEqual('Ellohay orldway', pigLatinSentence('Hello world'))             #True
+    assertEqual('Ellohay, orldway!!', pigLatinSentence('Hello, world!!'))       #True
+    assertEqual('eatay applesay', pigLatinSentence('eat apples'))               #True
+    assertEqual('ickquay ownbray oxfay', pigLatinSentence('quick brown fox'))   #True
